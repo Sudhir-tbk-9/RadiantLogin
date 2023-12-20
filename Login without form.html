@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Gloria Hallelujah  ,sans-serif;
+}
+
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vh;
+    background-color: black;
+    color: white;
+} */
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url(/RadiantLogin/pexels-stein-egil-liland-3384692.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: animatebg 5s linear infinite;
+}
+
+@keyframes animatebg {
+    100%{
+        filter: hue-rotate(360deg) ;
+    }
+}
+
+.login-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background-color: rgb(194, 34, 5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(224, 219, 219, 0.199);
+    border: 2px solid rgba(255,255,255,.5);
+    /* backdrop-filter: blur(20px) ; */
+}
+
+h2{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 310px;
+    margin: 30px 0px;
+    border-bottom: 2px solid #fff ;
+}
+
+.float{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+
+}
+
+.input-box input:focus~.float ,
+.input-box input:focus~.float 
+{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+
+}
+
+.register-link {
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover{
+    text-decoration: underline;
+}
+
+</style>
+</head>
+<body>
+    <section>
+    <div class="login-box">
+        <form action="">
+            <h2>Login</h2>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="mail"></ion-icon>
+                </span>
+                <input type="email" required>
+                <label class="float">Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <ion-icon name="lock-closed"></ion-icon>
+                </span>
+                <input type="password">
+                <label class="float">Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot Password ?</a>
+            </div>
+            <button type="submit">Login</button>
+            <div class="register-link">
+                <p>Don't have an account ?
+                <a href="#">Register here</a></p>
+            </div>
+        </form>
+    </div>
+</section>
+</body>
+</html>
